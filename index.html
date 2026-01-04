@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 단일 파일 디지털 웹명함 예제 / HTML + CSS + JS 모두 이 파일 하나에 포함 [web:2][web:20] -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디지털 명함</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <article class="card">
+        <div class="card__accent" aria-hidden="true"></div>
+        <div class="card__inner">
+          <!-- ===== 프로필 헤더 (이름/직함/회사) ===== -->
+          <!-- 아래 텍스트를 직접 수정해서 사용하면 됨 -->
+          <header class="card__header">
+            <div class="avatar" aria-hidden="true">
+              <div class="avatar__inner" id="avatarInitials">HK</div>
+            </div>
+            <div class="identity">
+              <h1 class="identity__name" id="fullName">홍길동</h1>
+              <p class="identity__title" id="jobTitle">
+                시스템 엔지니어 · 인프라 아키텍트
+              </p>
+              <p class="identity__company" id="companyName">ACME SYSTEMS CO.</p>
+            </div>
+          </header>
+
+          <!-- ===== 한 줄 소개 ===== -->
+          <section class="tagline" id="tagline">
+            안정적인 시스템과 깔끔한 코드를 지향하는 엔지니어입니다. 인프라,
+            네트워크, 백엔드를 모두 잇는 풀스택 관점을 추구합니다.
+          </section>
+
+          <!-- ===== 연락처 섹션 ===== -->
+          <section class="info-section" aria-label="연락처">
+            <h2 class="info-section__label">Contact</h2>
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-item__icon">☎</span>
+                <a
+                  id="phoneLink"
+                  class="info-item__link"
+                  href="tel:+821012345678"
+                  >+82 10-1234-5678</a
+                >
+              </li>
+              <li class="info-item">
+                <span class="info-item__icon">@</span>
+                <a
+                  id="emailLink"
+                  class="info-item__link"
+                  href="mailto:hong.gildong@example.com"
+                >
+                  hong.gildong@example.com
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ===== 주소 섹션 ===== -->
+          <section class="info-section" aria-label="주소">
+            <h2 class="info-section__label">Office</h2>
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-item__icon">📍</span>
+                <span id="addressText">
+                  서울특별시 중구 세종대로 110, 15F
+                </span>
+              </li>
+              <li class="info-item">
+                <span class="info-item__icon">🌐</span>
+                <a
+                  id="websiteLink"
+                  class="info-item__link"
+                  href="https://example.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://example.com
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ===== SNS 링크 ===== -->
+          <section class="social-row" aria-label="소셜 링크">
+            <!-- 원하는 SNS 주소로 href만 교체해서 사용 -->
+            <a
+              class="social-chip social-chip--primary"
+              href="https://www.linkedin.com/in/example"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="social-chip__dot"></span>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              class="social-chip social-chip--secondary"
+              href="https://github.com/example"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="social-chip__dot"></span>
+              <span>GitHub</span>
+            </a>
+            <a
+              class="social-chip social-chip--muted"
+              href="https://www.instagram.com/example"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="social-chip__dot"></span>
+              <span>Instagram</span>
+            </a>
+          </section>
+
+          <!-- ===== 하단 버튼 (연락처 저장 / 메일 보내기) ===== -->
+          <footer class="card__footer">
+            <button type="button" class="btn btn--primary" id="vcardButton">
+              <span class="btn__icon">⬇</span>
+              <span>연락처 저장(vCard)</span>
+            </button>
+            <button type="button" class="btn btn--ghost" id="emailButton">
+              <span class="btn__icon">✉</span>
+              <span>이메일 보내기</span>
+            </button>
+          </footer>
+        </div>
+      </article>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
