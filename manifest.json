@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "할일 관리 프로그램",
+  "version": "1.0",
+  "description": "구글 크롬 확장으로 할일을 관리합니다.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
